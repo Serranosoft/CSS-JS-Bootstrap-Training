@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script src="ownJS.js"></script>
+    <script src="index.js"></script>
     
 
     <!-- Bootstrap Javascript -->
@@ -15,35 +15,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <title>HTML, CSS, Javascript n Bootstrap Training</title>
-
-
-    <style>
-
-        .container{
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: 1fr;
-            gap: 20px;
-        }
-        
-        .box {
-            margin: 10px;
-        }
-
-        #reward_FirstBox{
-            display: none;
-        }
-
-        #close_FirstBox {
-            display: none;
-        }
-
-
-    </style>
-
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="container">
+
+        <!---------------------------------FIRST BOX-------------------------------------->
 
         <div class="box alert alert-success" role="alert">
             <h3>¡Well done!</h3>
@@ -54,12 +31,20 @@
                 <button id="close_FirstBox" onclick="showResult_FirstBox()" type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <p id="rewardContent_FirstBox">❤️❤️❤️</p>
+                <p id="rewardText_FirstBox">❤️❤️❤️</p>
             </div>
         </div>
 
+        <!---------------------------------SECOND BOX-------------------------------------->
 
-        <div class="box">Statement</div>
+        <div class="box alert box2">
+            <h4>¡Our next update will be available soon! <span class="badge badge-secondary">New</span></h4>
+            <hr>
+            <button type="button" class="btn btn-primary" id="updateText_SecondBox"><span>Update <span class="badge badge-light">0.1.5</span></span></button>
+
+        </div>
+
+        <!---------------------------------THIRD BOX-------------------------------------->
         <div class="box">Statement</div>
         <div class="box">Statement</div>
         <div class="box">Statement</div>

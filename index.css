@@ -1,0 +1,38 @@
+
+.container{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 20px;
+
+}
+        
+.box {
+
+    margin: 10px;
+}
+
+#reward_FirstBox{
+
+    display: none;
+
+}
+
+#close_FirstBox {
+
+    display: none;
+
+}
+
+.box2 {
+    grid-column: 2 / 4;
+    background-color:rgb(216, 216, 216);
+}
+
+#updateText_SecondBox:hover span {
+    display: none;
+}
+#updateText_SecondBox:hover:before {
+    content: "Read 0.1.5 Patch Notes";
+}
