@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- My CSS File -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- JQuery Library
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> -->
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,6 +14,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="index.js"></script>
+    <script src="functions.js"></script>
     
 
     <!-- Bootstrap Javascript -->
@@ -15,7 +22,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <title>HTML, CSS, Javascript n Bootstrap Training</title>
-    <link rel="stylesheet" href="index.css">
+    
 </head>
 <body>
     <div class="container">
@@ -25,13 +32,13 @@
         <div class="box alert alert-success box1" role="alert">
             <h3>¡Well done!</h3>
             <hr>
-            <p id="messageResult_FirstBox">Click here to earn <a href="#" onclick="showMessage_FirstBox()" class="alert-link">your reward</a></p>
+            <p id="messageResult_FirstBox">Click here to earn <a href="#" id="get_reward_box1" class="alert-link">your reward</a></p>
 
-            <div id="reward_FirstBox" class="alert dismissible fade show">
-                <button id="close_FirstBox" onclick="showResult_FirstBox()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <div id="reward_box1" class="alert dismissible fade show">
+                <button id="close_box1" type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <p id="rewardText_FirstBox">❤️❤️❤️</p>
+                <p>❤️❤️❤️</p>
             </div>
         </div>
 
@@ -40,27 +47,50 @@
         <div class="box alert box2">
             <h4>¡Our next update will be available soon! <span class="badge badge-secondary">New</span></h4>
             <hr>
-            <button type="button" class="btn btn-primary" id="updateText_SecondBox" onclick="showPatchNotes()"><span>Update <span class="badge badge-light">0.1.5</span></span></button>
-            <p id="patchNotes_SecondBox" class="mt-3"><strong>Added:</strong> Lorem ipsum dolor sit amet consectetur adipiscing elit convallis nascetur</br>
+            <button type="button" class="btn btn-primary" id="updateTextBox2"><span>Update <span class="badge badge-light">0.1.5</span></span></button>
+            <p id="patchNotesBox2" class="mt-3"><strong>Added:</strong> Lorem ipsum dolor sit amet consectetur adipiscing elit convallis nascetur</br>
                 <strong>Fixed:</strong> sociosqu consequat in litora pulvinar lobortis tempor vitae, sapien orci diam interdum egestas gravida elementum morbi. Taciti curae massa quisque imperdiet conubia sollicitudin, vestibulum phasellus nec pellentesque euismod integer est</p>
-                <button id="closePatchNotes" type="button" class="btn btn-info" onclick="closePatchNotes()">Close</button>
+                <button id="closePatchNotes" type="button" class="btn btn-info">Close</button>
             </div>
 
         <!---------------------------------THIRD BOX-------------------------------------->
         <div id="box3" class="box alert">
             <h3>Change my background color</h3>
-            <div id="options_thirdBox" class="btn-group btn-group-toggle mt-4 d-flex justify-content-center" data-toggle="buttons">
-                <label class="btn btn-light btn-lg active" onclick="changeBackgroundToWhite()">
+            <div class="btn-group btn-group-toggle mt-4 d-flex justify-content-center" data-toggle="buttons">
+                <label id="whiteBox3" class="btn btn-light btn-lg active">
                     <input type="radio" name="options" id="option1" checked> White
                 </label>
-                <label class="btn btn-dark btn-lg" onclick="changeBackgroundToDark()">
+                <label id="darkBox3" class="btn btn-dark btn-lg">
                     <input type="radio" name="options" id="option2"> Dark
                 </label>
 
             </div>
         </div>
 
-        <div class="box">Statement</div>
+        <!---------------------------------FOURTH BOX-------------------------------------->
+        <div class="box">
+
+            <div class="btn-toolbar">
+
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Put your email here">
+                        <div class="input-group-text">@</div>
+
+                        <div class="btn-group" role="group">
+                            <button id="emailOptionButton" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                                .com
+                            </button>
+                            <div id="chooseEmailOption" class="dropdown-menu" aria-labelledby="emailOptionButton">
+                                <a class="dropdown-item">.es</a>
+                                <a class="dropdown-item">.org</a>
+                                <a class="dropdown-item">.net</a>
+                            </div>
+                        </div>
+                </div>
+
+            </div>
+
+        </div>
         <div class="box">Statement</div>
         <div class="box">Statement</div>
         <div class="box">Statement</div>

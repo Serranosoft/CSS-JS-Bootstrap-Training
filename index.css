@@ -17,7 +17,7 @@
     /* Fixing height to separate height changing caused by showing/hiding content from Box 2 */
     height: 150px;
 }
-#reward_FirstBox, #close_FirstBox, #patchNotes_SecondBox, #closePatchNotes{
+#reward_box1, #close_box1, #patchNotesBox2, #closePatchNotes{
 
     display: none;
 
@@ -28,10 +28,10 @@
     background-color:rgb(216, 216, 216);
 }
 
-#updateText_SecondBox:hover span {
+#updateTextBox2:hover span {
     display: none;
 }
-#updateText_SecondBox:hover:before {
+#updateTextBox2:hover:before {
     content: "Read 0.1.5 Patch Notes";
 }
 

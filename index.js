@@ -1,4 +1,67 @@
-function showMessage_FirstBox() {
+window.addEventListener('DOMContentLoaded', function(){
+
+    // FIRST BOX
+
+    document.getElementById("get_reward_box1").addEventListener('click', function(){
+        var x = document.getElementById("reward_box1");
+        var y = document.getElementById("close_box1");
+        var z = document.getElementById("messageResult_FirstBox");
+
+        ShowAndHideContent(x, y);
+        $('.box1').css("height", "190");
+
+        y.addEventListener("click", function() {
+            z.textContent = "You've claimed all the rewards available";
+            $('.box1').css("height", "150");
+        })
+    });
+
+
+    // SECOND BOX
+
+    document.getElementById("updateTextBox2").addEventListener("click", function(){
+
+        var x = document.getElementById("patchNotesBox2");
+        var y = document.getElementById("closePatchNotes");
+        ShowAndHideContent(x, y);
+    });
+
+    document.getElementById("closePatchNotes").addEventListener("click", function() {
+        var x = document.getElementById("patchNotesBox2");
+        var y = document.getElementById("closePatchNotes");
+        ShowAndHideContent(x, y)
+    });
+
+    // THIRD BOX
+    
+    var box3 = document.getElementById("box3");
+    var box3_h3 = document.querySelector("#box3 h3");
+
+    document.getElementById("whiteBox3").addEventListener("click", function() {
+        box3.setAttribute("style", "background-color: white");
+        box3_h3.setAttribute("style", "color: black");
+    })
+
+    document.getElementById("darkBox3").addEventListener("click", function() {
+        box3.setAttribute("style", "background-color: black");
+        box3_h3.setAttribute("style", "color: white");
+    })
+
+
+});
+    
+    /*$(function(){
+    
+        $('#chooseEmailOption').on('click', '.dropdown-item', function() {
+            alert('AAA');
+            $('#emailOptionButton').text($(this).text());
+        });
+    });*/
+
+
+
+
+/*function showMessage_FirstBox() {
     
     var x = document.getElementById("reward_FirstBox");
     var y = document.getElementById("close_FirstBox");
@@ -12,42 +75,5 @@ function showMessage_FirstBox() {
         $('.box1').css("height", "190");
     }
    
-}
+}*/
 
-function showResult_FirstBox() {
-    var x = document.getElementById("messageResult_FirstBox");
-    x.textContent = "¡You already got this reward!"
-    $('.box1').css("height", "150");
-}
-
-function showPatchNotes() {
-
-    var x = document.getElementById("patchNotes_SecondBox");
-    if(x.style.display === 'none' || x.style.display === '') {
-        $('#patchNotes_SecondBox').css("display", "block");
-        $('#closePatchNotes').css("display", "block");
-    }
-}
-
-function closePatchNotes() {
-    $("#patchNotes_SecondBox").css("display","none");
-    $("#closePatchNotes").css("display", "none");
-}
-
-function changeBackgroundToWhite() {
-
-    $('#box3 h3').css("color", "black");
-    $('#box3').css("background-color", "white");
-}
-
-function changeBackgroundToDark() {
-    
-    $('#box3 h3').css("color", "white");
-    $('#box3').css("background-color", "black");
-
-    /* this could be done without Jquery by this way
-    var x = document.getElementById('box3');
-    var y = document.getElementById('options_thirdBox');
-    x.setAttribute('style', 'background-color:black');*/
-
-}
