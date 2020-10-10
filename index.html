@@ -22,7 +22,7 @@
 
         <!---------------------------------FIRST BOX-------------------------------------->
 
-        <div class="box alert alert-success" role="alert">
+        <div class="box alert alert-success box1" role="alert">
             <h3>¡Well done!</h3>
             <hr>
             <p id="messageResult_FirstBox">Click here to earn <a href="#" onclick="showMessage_FirstBox()" class="alert-link">your reward</a></p>
@@ -40,9 +40,11 @@
         <div class="box alert box2">
             <h4>¡Our next update will be available soon! <span class="badge badge-secondary">New</span></h4>
             <hr>
-            <button type="button" class="btn btn-primary" id="updateText_SecondBox"><span>Update <span class="badge badge-light">0.1.5</span></span></button>
-
-        </div>
+            <button type="button" class="btn btn-primary" id="updateText_SecondBox" onclick="showPatchNotes()"><span>Update <span class="badge badge-light">0.1.5</span></span></button>
+            <p id="patchNotes_SecondBox" class="mt-3"><strong>Added:</strong> Lorem ipsum dolor sit amet consectetur adipiscing elit convallis nascetur</br>
+                <strong>Fixed:</strong> sociosqu consequat in litora pulvinar lobortis tempor vitae, sapien orci diam interdum egestas gravida elementum morbi. Taciti curae massa quisque imperdiet conubia sollicitudin, vestibulum phasellus nec pellentesque euismod integer est</p>
+                <button id="closePatchNotes" type="button" class="btn btn-info" onclick="closePatchNotes()">Close</button>
+            </div>
 
         <!---------------------------------THIRD BOX-------------------------------------->
         <div id="box3" class="box alert">

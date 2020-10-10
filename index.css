@@ -13,13 +13,11 @@
     margin: 10px;
 }
 
-#reward_FirstBox{
-
-    display: none;
-
+.box1 {
+    /* Fixing height to separate height changing caused by showing/hiding content from Box 2 */
+    height: 150px;
 }
-
-#close_FirstBox {
+#reward_FirstBox, #close_FirstBox, #patchNotes_SecondBox, #closePatchNotes{
 
     display: none;
 

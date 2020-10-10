@@ -9,6 +9,7 @@ function showMessage_FirstBox() {
     }else if(x.style.display === 'none' || x.style.display === '' || y.style.display === 'none' || y.style.display === '') {
         y.style.display = "block";
         x.style.display = "block";
+        $('.box1').css("height", "190");
     }
    
 }
@@ -16,6 +17,21 @@ function showMessage_FirstBox() {
 function showResult_FirstBox() {
     var x = document.getElementById("messageResult_FirstBox");
     x.textContent = "¡You already got this reward!"
+    $('.box1').css("height", "150");
+}
+
+function showPatchNotes() {
+
+    var x = document.getElementById("patchNotes_SecondBox");
+    if(x.style.display === 'none' || x.style.display === '') {
+        $('#patchNotes_SecondBox').css("display", "block");
+        $('#closePatchNotes').css("display", "block");
+    }
+}
+
+function closePatchNotes() {
+    $("#patchNotes_SecondBox").css("display","none");
+    $("#closePatchNotes").css("display", "none");
 }
 
 function changeBackgroundToWhite() {
