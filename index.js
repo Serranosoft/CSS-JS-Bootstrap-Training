@@ -17,3 +17,21 @@ function showResult_FirstBox() {
     var x = document.getElementById("messageResult_FirstBox");
     x.textContent = "¡You already got this reward!"
 }
+
+function changeBackgroundToWhite() {
+
+    $('#box3 h3').css("color", "black");
+    $('#box3').css("background-color", "white");
+}
+
+function changeBackgroundToDark() {
+    
+    $('#box3 h3').css("color", "white");
+    $('#box3').css("background-color", "black");
+
+    /* this could be done without Jquery by this way
+    var x = document.getElementById('box3');
+    var y = document.getElementById('options_thirdBox');
+    x.setAttribute('style', 'background-color:black');*/
+
+}
