@@ -29,7 +29,7 @@
 
         <!---------------------------------FIRST BOX-------------------------------------->
 
-        <div class="box alert alert-success box1" role="alert">
+        <div id=box1 class="box alert alert-success" role="alert">
             <h3>¡Well done!</h3>
             <hr>
             <p id="messageResult_FirstBox">Click here to earn <a href="#" id="get_reward_box1" class="alert-link">your reward</a></p>
@@ -44,7 +44,7 @@
 
         <!---------------------------------SECOND BOX-------------------------------------->
 
-        <div class="box alert box2">
+        <div id="box2" class="box alert">
             <h4>¡Our next update will be available soon! <span class="badge badge-secondary">New</span></h4>
             <hr>
             <button type="button" class="btn btn-primary" id="updateTextBox2"><span>Update <span class="badge badge-light">0.1.5</span></span></button>
@@ -73,22 +73,26 @@
             <div class="btn-toolbar">
 
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Put your email here">
+                    <input id="email_Box4" type="text" class="form-control" placeholder="Put your email here">
                         <div class="input-group-text">@</div>
-
                         <div class="btn-group" role="group">
-                            <button id="emailOptionButton" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
-                                .com
-                            </button>
-                            <div id="chooseEmailOption" class="dropdown-menu" aria-labelledby="emailOptionButton">
-                                <a class="dropdown-item">.es</a>
-                                <a class="dropdown-item">.org</a>
-                                <a class="dropdown-item">.net</a>
-                            </div>
+                            <select id="chooseEmailDomain" class="custom-select mr-sm-2">
+                                <option selected>.es</option>
+                                <option>.net</option>
+                                <option>.com</option>
+                                <option>.org</option>
+                            </select>
                         </div>
                 </div>
-
+                <div class="col text-center mt-3">
+                    <button id="submit_Box4" type="submit" class="btn btn-primary ">Submit</button>
+                  </div>
             </div>
+
+            <div id="emailInfo_Box4" class="mt-4">
+                <strong id="emailSent_Box4"></strong></p>
+            </div>
+            
 
         </div>
         <div class="box">Statement</div>
