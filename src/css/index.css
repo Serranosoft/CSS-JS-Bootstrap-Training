@@ -3,7 +3,7 @@
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-rows: auto;
     gap: 20px;
 
 }
@@ -38,4 +38,13 @@
 #box3 {
     background-color:rgb(255, 255, 255);
 }
+
+#box4 {
+    width: 390px;
+}
+
+/*#box5 {
+
+    grid-column: 3;
+    grid-row: 2 / 4;}*/
 
