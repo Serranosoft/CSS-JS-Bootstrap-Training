@@ -1,40 +1,38 @@
 window.addEventListener('DOMContentLoaded', function(){
 
+    // global vars
+    
+    const box3 = document.getElementById("box3");
+    
     // FIRST BOX
-    var box1 = document.getElementById('box1');
+
     document.getElementById("get_reward_box1").addEventListener('click', function(){
         var x = document.getElementById("reward_box1");
         var y = document.getElementById("close_box1");
         var z = document.getElementById("messageResult_FirstBox");
 
         ShowAndHideContent(x, y);
-        box1.setAttribute("style", "height: 190px");
 
         y.addEventListener("click", function() {
             z.textContent = "You've claimed all the rewards available";
-            box1.setAttribute("style", "height: 150px");
         })
     });
 
 
     // SECOND BOX
 
+    var x = document.getElementById("patchNotesBox2");
+    var y = document.getElementById("closePatchNotes");
     document.getElementById("updateTextBox2").addEventListener("click", function(){
-
-        var x = document.getElementById("patchNotesBox2");
-        var y = document.getElementById("closePatchNotes");
-        ShowAndHideContent(x, y);
+        ShowAndHideContent(x, y);  
     });
 
     document.getElementById("closePatchNotes").addEventListener("click", function() {
-        var x = document.getElementById("patchNotesBox2");
-        var y = document.getElementById("closePatchNotes");
         ShowAndHideContent(x, y)
     });
 
     // THIRD BOX
 
-    var box3 = document.getElementById("box3");
     var box3_h3 = document.querySelector("#box3 h3");
 
     document.getElementById("whiteBox3").addEventListener("click", function() {

@@ -25,99 +25,225 @@
     
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
 
-        <!---------------------------------FIRST BOX-------------------------------------->
 
-        <div id=box1 class="box alert alert-success" role="alert">
-            <h3>¡Well done!</h3>
-            <hr>
-            <p id="messageResult_FirstBox">Click here to earn <a href="#" id="get_reward_box1" class="alert-link">your reward</a></p>
+        <div class="row justify-content-center">
+            <!---------------------------------FIRST BOX-------------------------------------->
 
-            <div id="reward_box1" class="alert dismissible fade show">
-                <button id="close_box1" type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <p>❤️❤️❤️</p>
+            <div class="alert alert-success col-lg-3" role="alert">
+                <h3>¡Well done!</h3>
+                <hr>
+                <p id="messageResult_FirstBox">Click here to earn <a href="#" id="get_reward_box1" class="alert-link">your reward</a></p>
+
+                <div id="reward_box1" class="alert dismissible fade show">
+                    <button id="close_box1" type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <p>❤️❤️❤️</p>
+                </div>
+            </div>
+
+            <!---------------------------------SECOND BOX-------------------------------------->
+
+            <div id="box2" class="alert col-lg-6">
+                <h4>¡Our next update will be available soon! <span class="badge badge-secondary">New</span></h4>
+                <hr>
+                <button type="button" class="btn btn-primary" id="updateTextBox2"><span>Update <span class="badge badge-light">0.1.5</span></span></button>
+                <p id="patchNotesBox2" class="mt-3"><strong><mark>Added:</mark></strong> Lorem ipsum dolor sit amet consectetur adipiscing elit convallis nascetur</br></br>
+                    <strong><mark>Fixed:</mark></strong> sociosqu consequat in litora pulvinar lobortis tempor vitae, sapien orci diam interdum egestas gravida elementum morbi. Taciti curae massa quisque imperdiet conubia sollicitudin, vestibulum phasellus nec pellentesque euismod integer est
+                    <button id="closePatchNotes" type="button" class="btn btn-info">Close</button>
+                </p>
+            </div>
+
+            <!---------------------------------THIRD BOX-------------------------------------->
+            <div id="box3" class="alert col-lg-3">
+                <h3>Change my background color</h3>
+                <div class="btn-group btn-group-toggle mt-4 d-flex justify-content-center" data-toggle="buttons">
+                    <label id="whiteBox3" class="btn btn-light btn-lg active">
+                        <input type="radio" name="options" checked> White
+                    </label>
+                    <label id="darkBox3" class="btn btn-dark btn-lg">
+                        <input type="radio" name="options"> Dark
+                    </label>
+                </div>
             </div>
         </div>
 
-        <!---------------------------------SECOND BOX-------------------------------------->
+        <div class="row justify-content-center mt-3">
 
-        <div id="box2" class="box alert">
-            <h4>¡Our next update will be available soon! <span class="badge badge-secondary">New</span></h4>
-            <hr>
-            <button type="button" class="btn btn-primary" id="updateTextBox2"><span>Update <span class="badge badge-light">0.1.5</span></span></button>
-            <p id="patchNotesBox2" class="mt-3"><strong><mark>Added:</mark></strong> Lorem ipsum dolor sit amet consectetur adipiscing elit convallis nascetur</br></br>
-                <strong><mark>Fixed:</mark></strong> sociosqu consequat in litora pulvinar lobortis tempor vitae, sapien orci diam interdum egestas gravida elementum morbi. Taciti curae massa quisque imperdiet conubia sollicitudin, vestibulum phasellus nec pellentesque euismod integer est</p>
-                <button id="closePatchNotes" type="button" class="btn btn-info">Close</button>
-            </div>
-
-        <!---------------------------------THIRD BOX-------------------------------------->
-        <div id="box3" class="box alert">
-            <h3>Change my background color</h3>
-            <div class="btn-group btn-group-toggle mt-4 d-flex justify-content-center" data-toggle="buttons">
-                <label id="whiteBox3" class="btn btn-light btn-lg active">
-                    <input type="radio" name="options" id="option1" checked> White
-                </label>
-                <label id="darkBox3" class="btn btn-dark btn-lg">
-                    <input type="radio" name="options" id="option2"> Dark
-                </label>
-
-            </div>
-        </div>
-
-        <!---------------------------------FOURTH BOX-------------------------------------->
-        <div id="box4" class="box">
-            <div class="card text-center card-header">
-                ¡Subscribe to our newsletter now!
-
-            
-            <div class="btn-toolbar mt-3">
-
-                <div class="input-group">
-                    <input id="email_Box4" type="text" class="form-control" placeholder="Put your email here">
-                        <div class="input-group-text">@</div>
-                        <div class="btn-group" role="group">
-                            <select id="chooseEmailDomain" class="custom-select">
-                                <option selected>.es</option>
-                                <option>.net</option>
-                                <option>.com</option>
-                                <option>.org</option>
-                            </select>
+            <!---------------------------------FOURTH BOX-------------------------------------->
+            <div class="col-lg-5 text-center align-self-center">
+                <div class="card card-header">
+                    ¡Subscribe to our newsletter now!
+                    <div class="btn-toolbar mt-3 justify-content-center">
+                        <div class="input-group">
+                            <input id="email_Box4" type="text" class="form-control" placeholder="Put your email here">
+                                <div class="input-group-text">@</div>
+                                <div class="btn-group" role="group">
+                                    <select id="chooseEmailDomain" class="custom-select">
+                                        <option selected>.es</option>
+                                        <option>.net</option>
+                                        <option>.com</option>
+                                        <option>.org</option>
+                                    </select>
+                                </div>
                         </div>
-                </div>
-                <div class="col text-center mt-3">
-                    <button id="submit_Box4" type="submit" class="btn btn-primary btn-block">Submit</button>
-                  </div>
-            </div>
+                    </div>
+                    <div class="mt-2 justify-content-center">
+                        <button id="submit_Box4" type="submit" class="btn btn-primary">Submit</button>
+                        </div>
 
-            <div id="emailInfo_Box4" class="mt-4">
-                <strong id="emailSent_Box4"></strong></p>
-            </div>
-        </div>
-            
-
-        </div>
-
-        <!---------------------------------FIFTH BOX-------------------------------------->
-
-        <div id="box5" class="box p-2">
-            
-            <div class="text-center">
-                <h3>JOIN OUR NEWSLETTER</h3>
-                <div class="card-body">
-                    <span class="text-secondary">Subscribe our newsletter to receive the latest news and exclusive offers every week</span>
-                    <input id="email_newsletter" type="text" class="form-control mt-4 mb-3" placeholder="Enter your email">
-                    <button class="btn btn-dark btn-block mb-2">SUBSCRIBE</button>
-                    <u>NO THANKS</u>
+                    <div id="emailInfo_Box4" class="mt-4">
+                        <strong id="emailSent_Box4"></strong></p>
+                    </div>
                 </div>
             </div>
+
+            <!---------------------------------FIFTH BOX-------------------------------------->
+
+            <div id="box5" class="col-lg-5">
+                
+                <div class="text-center">
+                    <h3>JOIN OUR NEWSLETTER</h3>
+                    <div class="card-body">
+                        <span class="text-secondary">Subscribe our newsletter to receive the latest news and exclusive offers every week</span>
+                        <input id="email_newsletter" type="text" class="form-control mt-4 mb-3" placeholder="Enter your email">
+                        <button class="btn btn-dark btn-block mb-2">SUBSCRIBE</button>
+                        <u>NO THANKS</u>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <!---------------------------------FIFTH BOX-------------------------------------->
+        <!---------------------------------SIXTH BOX-------------------------------------->
 
-        
+        <div id="row mt-3">
+            <div class="col-lg-12">
+                <h2 id="trendingProducts" class="text-center mb-5">Trending <b>Products</b></h2>
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <a href="#bestProducts" data-toggle="tab" class="nav-link active">Best products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#newestProducts" data-toggle="tab" class="nav-link">Newest products</a>
+                        </li>
+                    </ul>
+                </div>
+
+                
+                <div class="tab-content">
+
+                    <div id="bestProducts" class="tab-pane active">
+
+                        <div id="products_carousel" class="carousel slide" data-ride="carousel" data-interval="0">
+
+
+
+                            <div class="carousel-inner mt-3">
+                                <a class="carousel-control-prev" href="#products_carousel" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </a>
+                                <a class="carousel-control-next" href="#products_carousel" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </a>
+                                <div class="carousel-item active">
+                                    
+                                    <div class="card-group">
+                                        
+                                        <div class="card border-0 mb-0">
+                                            <img src="/Training/img/shoes.jpg" class="card-img-top w-50 h-50 mx-auto" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-center">
+                                                    SHOES
+                                                </h5>
+                                                <p class="card-text">
+                                                    our best collection of shoes, tidy up your wardrobe with new garment and enjoy these big cheap deals with the best materials and fabrics
+                                                </p>
+                                            </div>
+                                        </div>
+                
+                                        <div class="card border-0">
+                                            <img src="/Training/img/shirt.jpg" class="card-img-top w-50 h-50 mx-auto" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-center">
+                                                    SHIRTS
+                                                </h5>
+                                                <p class="card-text">
+                                                    our best collection of shirts, tidy up your wardrobe with new garment and enjoy these big cheap deals with the best materials and fabrics
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="card border-0">
+                                            <img src="/Training/img/boots.jpg" class="card-img-top w-50 h-50 mx-auto" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-center">
+                                                    BOOTS
+                                                </h5>
+                                                <p class="card-text">
+                                                    our best collection of boots, tidy up your wardrobe with new garment and enjoy these big cheap deals with the best materials and fabrics
+                                                </p>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <div class="card-group">
+                                        
+                                        <div class="card border-0">
+                                            <img src="/Training/img/shoes.jpg" class="card-img-top w-50 h-50 mx-auto" alt="...">
+                                            <div class="card-body mb-0">
+                                                <h5 class="card-title text-center">
+                                                    SHOES
+                                                </h5>
+                                                <p class="card-text">
+                                                    our best collection of shoes, tidy up your wardrobe with new garment and enjoy these big cheap deals with the best materials and fabrics
+                                                </p>
+                                            </div>
+                                        </div>
+                
+                                        <div class="card border-0">
+                                            <img src="/Training/img/shirt.jpg" class="card-img-top w-50 h-50 mx-auto" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-center">
+                                                    SHIRTS
+                                                </h5>
+                                                <p class="card-text">
+                                                    our best collection of shirts, tidy up your wardrobe with new garment and enjoy these big cheap deals with the best materials and fabrics
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="card border-0">
+                                            <img src="/Training/img/boots.jpg" class="card-img-top w-50 h-50 mx-auto" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-center">
+                                                    BOOTS
+                                                </h5>
+                                                <p class="card-text">
+                                                    our best collection of boots, tidy up your wardrobe with new garment and enjoy these big cheap deals with the best materials and fabrics
+                                                </p>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+
+                            
+                    </div>
+                    
+                    <div id="newestProducts" class="tab-pane">BBBB</div>            
+                </div>
+            </div>
+        </div>
+
         <div class="box">Statement</div>
         <div class="box">Statement</div>
         <div class="box">Statement</div>

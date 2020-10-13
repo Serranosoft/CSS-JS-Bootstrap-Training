@@ -1,0 +1,8 @@
+3 columns-Grid displayed as different boxes, each one has a bootstrap4 component (or a combination of them) with a 
+meaningless functionality to test and learn by myself Bootstrap 4 and Javascript
+
+# -> Number of Box
+
+#1-2-3 Adjust margins between columns
+#6 Remove excess of blank space at bottom on Trending Products (Box 6)
+#6 Adjust carousel controls margins
