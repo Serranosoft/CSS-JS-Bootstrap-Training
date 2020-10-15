@@ -18,19 +18,6 @@ window.addEventListener('DOMContentLoaded', function(){
         })
     });
 
-
-    // SECOND BOX
-
-    var x = document.getElementById("patchNotesBox2");
-    var y = document.getElementById("closePatchNotes");
-    document.getElementById("updateTextBox2").addEventListener("click", function(){
-        ShowAndHideContent(x, y);  
-    });
-
-    document.getElementById("closePatchNotes").addEventListener("click", function() {
-        ShowAndHideContent(x, y)
-    });
-
     // THIRD BOX
 
     var box3_h3 = document.querySelector("#box3 h3");
